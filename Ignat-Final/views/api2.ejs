@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Low Carb Recipes</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+          .hero-image {
+          background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("lowcarb.jpg");
+          }
+          .bgimg-1 {
+          background-image: url("lowcarb2.jpg");
+          }
+          .bgimg-2 {
+           background-image: url("lowcarb2.jpg");
+          }
+          form {
+              display: inline-block;
+              text-align: left;
+              margin: 20px 0;
+          }
+  
+          label {
+              display: block;
+              margin-bottom: 5px;
+          }
+  
+          input[type="text"],
+          textarea {
+              width: 100%;
+              padding: 8px;
+              margin-bottom: 10px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              box-sizing: border-box;
+          }
+  
+          button[type="submit"] {
+              background-color: #4CAF50;
+              color: white;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+          }
+  
+          button[type="submit"]:hover {
+              background-color: #45a049;
+          }
+      </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="/loggedin">Iggi's Recipes</a>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/api1">Recipes by API-Ninjas </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/api2">Low Carb Recipes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/cocktails">Cocktails Recipes</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/loggedin">Back to the Iggi's Recipes</a>
+    </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/logout">Log out</a>
+        </li>
+        
+  </nav>
+    <div class="hero-image">
+        <div class="hero-text">
+          <h1>Low Carb Recipes</h1>
+          <p>Here you can search Low Carb Recipes. Just type the name of desired dish!</p>
+          <button onclick="scrollToForm()">Let's start!</button>
+        </div>
+    </div>
+    <div class="row g-0">
+        <div class="col">
+          <div class="bgimg-1">
+          </div>
+        </div>
+        <div class="col-10">
+          <br>
+          <div id="api1c">
+            <h1 id="xdd">Low Carb Recipe Search</h1>
+            <form id="lowcarbRecipeForm">
+                <label for="lowcarbFoodInput">Enter the name of the food (Low-Carb):</label>
+                <input type="text" id="lowcarbFoodInput" name="lowcarbFoodInput" required>
+                <button type="submit">Search</button>
+              </form>
+              <div id="lowcarbRecipeResults"></div><br><br><br><br>
+        </div>
+        <br><br><br>
+        <hr>
+          <footer style="text-align: center;">  
+            <p>Ignat Tyo</p>
+            <p>IT-2206</p>
+            <br>
+          </footer>
+        </div>
+    <div class="col">
+      <div class="bgimg-2">
+    </div>
+  </div>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="api2scripts.js"></script>
+
+
+</body>
+</html>
